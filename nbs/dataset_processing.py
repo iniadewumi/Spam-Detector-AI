@@ -1,4 +1,3 @@
-#%%
 from downloader import all_paths
 import pandas as pd
 

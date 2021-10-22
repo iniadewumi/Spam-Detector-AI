@@ -11,8 +11,10 @@ SPAM_CLASSIFIER_DIR = DATASETS_DIR / "spam-classifier"
 SMS_SPAM_DIR = SPAM_CLASSIFIER_DIR / "sms-spam" 
 YOUTUBE_SPAM_DIR = SPAM_CLASSIFIER_DIR / "youtube-spam"
 EXPORTS_DIR = DATASETS_DIR / "exports"
+SPAM_DATASET_PATH = EXPORTS_DIR / "spam-dataset.csv"
 
-all_paths = {'base': BASE_DIR, 'datasets': DATASETS_DIR, 'zips': ZIPS_DIR, 'spam-classifier': SPAM_CLASSIFIER_DIR, 'sms': SMS_SPAM_DIR, 'youtube-spam': YOUTUBE_SPAM_DIR, "exports": EXPORTS_DIR}
+
+all_paths = {'base': BASE_DIR, 'datasets': DATASETS_DIR, 'zips': ZIPS_DIR, 'spam-classifier': SPAM_CLASSIFIER_DIR, 'sms': SMS_SPAM_DIR, 'youtube-spam': YOUTUBE_SPAM_DIR, "exports": EXPORTS_DIR, "full_spam_df": SPAM_DATASET_PATH}
 
 
 
