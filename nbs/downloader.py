@@ -10,15 +10,17 @@ ZIPS_DIR = DATASETS_DIR / "zips"
 SPAM_CLASSIFIER_DIR = DATASETS_DIR / "spam-classifier"
 SMS_SPAM_DIR = SPAM_CLASSIFIER_DIR / "sms-spam" 
 YOUTUBE_SPAM_DIR = SPAM_CLASSIFIER_DIR / "youtube-spam"
+EXPORTS_DIR = DATASETS_DIR / "exports"
 
-all_paths = {'base': BASE_DIR, 'datasets': DATASETS_DIR, 'zips': ZIPS_DIR, 'spam-classifier': SPAM_CLASSIFIER_DIR, 'sms': SMS_SPAM_DIR, 'youtube-spam': YOUTUBE_SPAM_DIR}
+all_paths = {'base': BASE_DIR, 'datasets': DATASETS_DIR, 'zips': ZIPS_DIR, 'spam-classifier': SPAM_CLASSIFIER_DIR, 'sms': SMS_SPAM_DIR, 'youtube-spam': YOUTUBE_SPAM_DIR, "exports": EXPORTS_DIR}
 
 
 
 def main():
-    if not os.path.exists(ZIPS_DIR):
-        os.makedirs(ZIPS_DIR)
-
+    os.makedirs(ZIPS_DIR, exist_ok=True)        
+    os.makedirs(SMS_SPAM_DIR, exist_ok=True)
+    os.makedirs(YOUTUBE_SPAM_DIR, exist_ok=True)
+    os.makedirs(EXPORTS_DIR, exist_ok=True)
 
     SMS_ZIP = "https://archive.ics.uci.edu/ml/machine-learning-databases/00228/smsspamcollection.zip"
     YOUTUBE_ZIP = "https://archive.ics.uci.edu/ml/machine-learning-databases/00380/YouTube-Spam-Collection-v1.zip"
@@ -34,8 +36,6 @@ def main():
     download_spam_collection(SMS_ZIP, filename="spam-dataset.zip")
 
 
-    os.makedirs(SMS_SPAM_DIR, exist_ok=True)
-    os.makedirs(YOUTUBE_SPAM_DIR, exist_ok=True)
 
     def unzip_spam_collection(filepath, destination):
         if len(os.listdir(destination))<1:
