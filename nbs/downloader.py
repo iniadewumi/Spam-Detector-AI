@@ -12,9 +12,14 @@ SMS_SPAM_DIR = SPAM_CLASSIFIER_DIR / "sms-spam"
 YOUTUBE_SPAM_DIR = SPAM_CLASSIFIER_DIR / "youtube-spam"
 EXPORTS_DIR = DATASETS_DIR / "exports"
 SPAM_DATASET_PATH = EXPORTS_DIR / "spam-dataset.csv"
+METADATA_PATH = EXPORTS_DIR / "spam-metadata.pkl"
+TOKENIZER_PATH = EXPORTS_DIR / "spam-tokenizer.json"
 
 
-all_paths = {'base': BASE_DIR, 'datasets': DATASETS_DIR, 'zips': ZIPS_DIR, 'spam-classifier': SPAM_CLASSIFIER_DIR, 'sms': SMS_SPAM_DIR, 'youtube-spam': YOUTUBE_SPAM_DIR, "exports": EXPORTS_DIR, "full_spam_df": SPAM_DATASET_PATH}
+all_paths = {'base': BASE_DIR, 'datasets': DATASETS_DIR, 'zips': ZIPS_DIR, 
+            'spam-classifier': SPAM_CLASSIFIER_DIR, 'sms': SMS_SPAM_DIR, 
+            'youtube-spam': YOUTUBE_SPAM_DIR, "exports": EXPORTS_DIR, 
+            "full_spam_df": SPAM_DATASET_PATH, "metadata": METADATA_PATH, "tokenizer":TOKENIZER_PATH}
 
 
 

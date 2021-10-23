@@ -6,3 +6,5 @@ pypyr
 python-dotenv
 tensorflow
 uvicorn
+sklearn
+boto3
