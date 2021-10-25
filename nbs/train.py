@@ -86,10 +86,3 @@ for name, file in files.items():
         s3.upload_fileobj(f, "ai-tokenizer", "models/"+name)
         
 
-
-ACCESS_KEY = "AKIASY4JUS2W3KYNOD5W"
-SECRET_KEY = "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"
-
-ENPOINT = ""
-REGION = "us-west-2"
-BUCKET_NAME = "ai-tokenizer"
